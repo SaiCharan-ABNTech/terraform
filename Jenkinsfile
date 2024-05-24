@@ -10,16 +10,13 @@ pipeline {
 
    agent  any
     stages {
-        stage('checkout') {
-            steps {
-                 script{
-                        dir("terraform")
-                        {
-                            git "https://github.com/SaiCharan-ABNTech/terraform.git"
-                        }
-                    }
-                }
+        stage('Checkout from Git'){
+            steps{
+                git branch: 'main', url:'https://github.com/SaiCharan-ABNTech/terraform.git'
             }
+        }
+    }
+}
 
         stage('Plan') {
             steps {
