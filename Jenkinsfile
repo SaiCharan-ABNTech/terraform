@@ -6,11 +6,6 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/SaiCharan-ABNTech/terraform.git'
             }
         }
-        stage('Terraform version'){
-             steps{
-                 sh 'terraform --version'
-             }
-        }
         stage('Terraform init'){
              steps{
                  dir('terraform') {
