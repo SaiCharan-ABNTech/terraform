@@ -20,7 +20,7 @@ pipeline {
                 }
             }
         }
-        stage('Terraform apply/destroy') {
+        stage('Terraform apply') {
             steps {
                 dir('terraform') {
                     // Define the action here, whether it's apply or destroy
