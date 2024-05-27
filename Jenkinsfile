@@ -20,13 +20,6 @@ pipeline {
                 }
             }
         }
-        stage('Terraform plan') {
-            steps {
-                dir('terraform') {
-                    bat 'terraform plan'
-                }
-            }
-        }
         stage('Terraform apply/destroy') {
             steps {
                 dir('terraform') {
