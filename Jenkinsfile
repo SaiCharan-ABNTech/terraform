@@ -23,10 +23,9 @@ pipeline {
         stage('Terraform apply') {
             steps {
                 dir('terraform') {
-                    // Define the action here, whether it's apply or destroy
                     script {
-                        def action = 'apply' // or 'destroy'
-                        bat "terraform ${action} --auto-approve"
+                        def action = 'apply'
+                        bat "terraform ${action}"
                     }
                 }
             }
