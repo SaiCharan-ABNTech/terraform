@@ -23,9 +23,7 @@ pipeline {
         stage('Terraform apply') {
             steps {
                 dir('terraform') {
-                    script {
-                        def action = 'apply'
-                        bat "terraform ${action}"
+                    bat 'terraform apply'
                     }
                 }
             }
