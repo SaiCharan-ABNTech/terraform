@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_instance" "foo" {
   ami           = "ami-04b70fa74e45c3917"
   instance_type = "t2.micro"
-  key_name = "windows"
+  key_name = "Backup"
   tags = {
       Name = "TF-Instance"
   }
